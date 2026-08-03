@@ -1,6 +1,6 @@
 # Ovis-Omni-Embedding
 <div align="center">
-  <img src=a.png width="30%"/>
+  <img src=ovis_logo.png width="30%"/>
 </div>
 <br>
 

@@ -15,17 +15,14 @@ Ovis-Omni-Embedding is an omni-modal embedding model developed by the Alibaba AT
 
 The first release, **Ovis-Omni-Embedding-v0.1-3B**, achieves leading performance on the Massive Multimodal Embedding Benchmark (MMEB).
 
-The technical report and model weights will be released in the near future. Stay tuned!
-
-## 🔥 We are hiring!
-We are seeking motivated researchers and engineers — at both intern and full-time levels — to join our team, with a research focus on next-generation multimodal AI search. Candidates with a strong background in multimodal representation learning, cross-modal retrieval, or large-scale embedding models are particularly encouraged to apply. Please send your resume to qingguo.cqg@alibaba-inc.com.
+The technical report will be released in the near future. Stay tuned!
 
 ## Release
-- [26/07/30] 🔥 Announcing Ovis-Omni-Embedding, an omni-modal embedding model for text, image, video, and audio. The technical report and model weights of Ovis-Omni-Embedding-v0.1-3B are coming soon.
+- [26/07/30] 🔥 Announcing Ovis-Omni-Embedding, an omni-modal embedding model for text, image, video, and audio. The technical report of Ovis-Omni-Embedding-v0.1-3B are coming soon.
 
 ## Model
 
-| Model | Parameters | Supported Modalities | Model Weights |
+| Model | Parameters | Supported Modalities | Tech Report |
 |:------|:----------:|:--------------------:|:-------------:|
 | Ovis-Omni-Embedding-v0.1-3B | 3B | Text / Image / Video / Audio | Coming soon |
 

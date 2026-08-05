@@ -6,7 +6,6 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/📖_Technical_Report-Coming_Soon-b31b1b.svg" alt="technical report">
-  <img src="https://img.shields.io/badge/🤗_Models-Coming_Soon-yellow" alt="models">
 </p>
 
 ## Introduction

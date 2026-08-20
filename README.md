@@ -25,6 +25,9 @@ The technical report will be released in the near future. Stay tuned!
 |:------|:----------:|:--------------------:|:-------------:|
 | Ovis-Omni-Embedding-v0.1-3B | 3B | Text / Image / Video / Audio | Coming soon |
 
+## Related Projects
+- [**Ovis-VL-Embedding**](https://github.com/ATH-MaaS/Ovis-VL-Embedding): A vision-language embedding model for text and image.
+
 ## Citation
 The technical report is forthcoming. Citation information will be provided upon its release.
 

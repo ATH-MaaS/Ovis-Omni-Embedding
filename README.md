@@ -16,6 +16,8 @@ Ovis-Omni-Embedding is an omni-modal embedding model developed by the Alibaba AT
 
 ## Release
 - [26/09/04] 🔥 **Ovis-Omni-Embedding-3B** released. Check out the [MMEB Leaderboard](https://huggingface.co/spaces/TIGER-Lab/MMEB) for results.
+- [26/08/21] 🔥 **Ovis-Omni-Embedding-v0.5** released and submitted to the [MMEB](https://huggingface.co/spaces/TIGER-Lab/MMEB) official leaderboard.
+- [26/07/30] 🔥 Announcing Ovis-Omni-Embedding, an omni-modal embedding model for text, image, video, and audio.
 
 ## Model
 

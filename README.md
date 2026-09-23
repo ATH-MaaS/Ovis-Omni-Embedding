@@ -5,6 +5,7 @@
 <br>
 
 <p align="center">
+  <a href="https://github.com/ATH-MaaS/Ovis-Omni-Embedding"><img src="https://img.shields.io/badge/GitHub-Ovis--Omni--Embedding-3157C8?logo=github" alt="github"></a>
   <a href="https://huggingface.co/ATH-MaaS/Ovis-Omni-Embedding-3B"><img src="https://img.shields.io/badge/🤗_Model_Page-Ovis--Omni--Embedding--3B-yellow" alt="model page"></a>
   <a href="https://arxiv.org/pdf/2609.25165"><img src="https://img.shields.io/badge/📖_Technical_Report-arXiv-b31b1b.svg" alt="technical report"></a>
 </p>

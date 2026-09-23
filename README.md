@@ -6,7 +6,7 @@
 
 <p align="center">
   <a href="https://huggingface.co/ATH-MaaS/Ovis-Omni-Embedding-3B"><img src="https://img.shields.io/badge/🤗_Model_Page-Ovis--Omni--Embedding--3B-yellow" alt="model page"></a>
-  <img src="https://img.shields.io/badge/📖_Technical_Report-Coming_Soon-b31b1b.svg" alt="technical report">
+  <a href="https://arxiv.org/pdf/2609.25165"><img src="https://img.shields.io/badge/📖_Technical_Report-arXiv-b31b1b.svg" alt="technical report"></a>
 </p>
 
 ## Introduction
@@ -15,7 +15,7 @@ Ovis-Omni-Embedding is an omni-modal embedding model developed by the Alibaba AT
 
 **Ovis-Omni-Embedding-3B** achieves leading performance on the Massive Multimodal Embedding Benchmark (MMEB). It is a 3B-parameter universal embedding model for text, images, visual documents, video, audio, and interleaved multimodal inputs, and is initialized from **Qwen2.5-Omni-3B**. Rather than attaching separate modality-specific embedding towers, it retains the native text tokenizer, vision encoder, audio encoder, and shared Thinker backbone. The speech-generation Talker and language-modeling head are removed, and the final-layer hidden state at the last non-padding token is used directly as the retrieval embedding.
 
-> The model page is now available on Hugging Face: [**ATH-MaaS/Ovis-Omni-Embedding-3B**](https://huggingface.co/ATH-MaaS/Ovis-Omni-Embedding-3B). Model weights are not open-sourced yet and will be released in the near future. Stay tuned!
+> Our technical report is now available on arXiv: [**arXiv:2609.25165**](https://arxiv.org/pdf/2609.25165). The model page is also live on Hugging Face: [**ATH-MaaS/Ovis-Omni-Embedding-3B**](https://huggingface.co/ATH-MaaS/Ovis-Omni-Embedding-3B). Model weights are not open-sourced yet and will be released in the near future. Stay tuned!
 
 ## Model Highlights
 
@@ -57,7 +57,7 @@ Across the 31 aggregate and sub-task entries in the complete comparison, Ovis-Om
 These benchmark families use their own official aggregation procedures, so their scores should not be averaged together. MAEB and MVEB results are local evaluations inserted into the corresponding leaderboard snapshots, as described in the technical report.
 
 ## Release
-- [26/09/23] 🔥 The model page of **Ovis-Omni-Embedding-3B** is now live on [Hugging Face](https://huggingface.co/ATH-MaaS/Ovis-Omni-Embedding-3B). Model weights will be open-sourced soon.
+- [26/09/23] 🔥 Our [technical report](https://arxiv.org/pdf/2609.25165) is out, and the model page of **Ovis-Omni-Embedding-3B** is now live on [Hugging Face](https://huggingface.co/ATH-MaaS/Ovis-Omni-Embedding-3B). Model weights will be open-sourced soon.
 - [26/09/04] 🔥 **Ovis-Omni-Embedding-3B** released. Check out the [MMEB Leaderboard](https://huggingface.co/spaces/TIGER-Lab/MMEB) for results.
 - [26/08/21] 🔥 **Ovis-Omni-Embedding-v0.5** released and submitted to the [MMEB](https://huggingface.co/spaces/TIGER-Lab/MMEB) official leaderboard.
 - [26/07/30] 🔥 Announcing Ovis-Omni-Embedding, an omni-modal embedding model for text, image, video, and audio.
@@ -66,13 +66,13 @@ These benchmark families use their own official aggregation procedures, so their
 
 | Model | Parameters | Supported Modalities | Embedding Dim | Model Page | Model Weights | Tech Report |
 |:------|:----------:|:--------------------:|:-------------:|:----------:|:-------------:|:-----------:|
-| Ovis-Omni-Embedding-3B | 3B | Text / Image / Visual Document / Video / Audio | 2048 (elastic: 1024 / 512 / 256 / 128) | [🤗 HF](https://huggingface.co/ATH-MaaS/Ovis-Omni-Embedding-3B) | Coming soon | Coming soon |
+| Ovis-Omni-Embedding-3B | 3B | Text / Image / Visual Document / Video / Audio | 2048 (elastic: 1024 / 512 / 256 / 128) | [🤗 HF](https://huggingface.co/ATH-MaaS/Ovis-Omni-Embedding-3B) | Coming soon | [📖 arXiv](https://arxiv.org/pdf/2609.25165) |
 
 ## Related Projects
 - [**Ovis-VL-Embedding**](https://github.com/ATH-MaaS/Ovis-VL-Embedding): A vision-language embedding model for text, image, visual document, and video.
 
 ## Citation
-The technical report is forthcoming. Citation information will be provided upon its release.
+If you find this work useful, please consider citing our technical report: [arXiv:2609.25165](https://arxiv.org/pdf/2609.25165).
 
 ## License
 This project is licensed under the [Apache License, Version 2.0](https://www.apache.org/licenses/LICENSE-2.0.txt) (SPDX-License-Identifier: Apache-2.0).

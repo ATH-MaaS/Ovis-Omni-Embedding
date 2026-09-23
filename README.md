@@ -48,11 +48,11 @@ Across the 31 aggregate and sub-task entries in the complete comparison, Ovis-Om
 
 ### Additional benchmark results
 
-| Benchmark | Ovis-Omni-Embedding-3B | Evaluation scope |
-|:----------|:----------------------:|:-----------------|
-| MAEB (beta) | 57.29 | Mean over 30 audio embedding tasks |
-| MVEB (beta) | 61.77 | Mean over 23 video and audio-video embedding tasks |
-| RTEB | 67.35 | 15-task English public retrieval split |
+| Benchmark | Ovis-Embedding-Omni-3B | Best compared baseline | Evaluation scope |
+|---|---:|---:|---|
+| MAEB (beta) | **57.29** | LCO-Embedding-Omni-7B: 53.54 | Mean over 30 audio embedding tasks |
+| MVEB (beta) | **61.77** | LCO-Embedding-Omni-7B: 57.58 | Mean over 23 video and audio-video embedding tasks |
+| RTEB | **67.35** | Qwen3-Embedding-4B: 67.27 | 15-task English public retrieval split |
 
 These benchmark families use their own official aggregation procedures, so their scores should not be averaged together. MAEB and MVEB results are local evaluations inserted into the corresponding leaderboard snapshots, as described in the technical report.
 

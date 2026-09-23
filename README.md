@@ -17,17 +17,6 @@ Ovis-Omni-Embedding is an omni-modal embedding model developed by the Alibaba AT
 
 > Our technical report is now available on arXiv: [**arXiv:2609.25165**](https://arxiv.org/pdf/2609.25165). The model page is also live on Hugging Face: [**ATH-MaaS/Ovis-Omni-Embedding-3B**](https://huggingface.co/ATH-MaaS/Ovis-Omni-Embedding-3B). Model weights are not open-sourced yet and will be released in the near future. Stay tuned!
 
-## Model Highlights
-
-- **Native omni-modal encoder:** Text, image, video, and audio tokens are jointly processed by the pretrained Qwen2.5-Omni Thinker instead of being aligned through separately trained retrieval towers.
-- **Any-to-any retrieval:** Queries and candidates may each contain a single modality or an interleaved combination of supported modalities.
-- **One shared embedding interface:** Last-token pooling with no modality-specific projection head; all inputs are compared in the same cosine-similarity space.
-- **Data-centric omni-modal training:** Training spans text retrieval, image understanding, visual documents, video, speech, music, environmental sound, and agent-oriented tasks.
-- **Difficulty-aware contrastive learning:** Focal embedding loss reduces the weight of already resolved examples and focuses optimization on queries with competitive negatives.
-- **Fine-grained embedding distillation:** The model learns complete teacher similarity distributions over positive and negative candidates rather than only one-hot relevance labels.
-- **Homogeneous-source finetuning:** Each micro-batch is drawn from one dataset, producing task-consistent in-batch negatives and limiting shortcuts based on modality or formatting.
-- **Elastic embedding dimensions:** The native 2048-dimensional representation can be adapted to 1024, 512, 256, or 128 dimensions through post-hoc low-rank feature decomposition and lightweight residual adapters.
-
 ## Performance
 
 ### MMEB-v3

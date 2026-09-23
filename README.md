@@ -5,6 +5,7 @@
 <br>
 
 <p align="center">
+  <a href="https://huggingface.co/ATH-MaaS/Ovis-Omni-Embedding-3B"><img src="https://img.shields.io/badge/🤗_Model_Page-Ovis--Omni--Embedding--3B-yellow" alt="model page"></a>
   <img src="https://img.shields.io/badge/📖_Technical_Report-Coming_Soon-b31b1b.svg" alt="technical report">
 </p>
 
@@ -12,21 +13,63 @@
 
 Ovis-Omni-Embedding is an omni-modal embedding model developed by the Alibaba ATH-MaaS team. It maps heterogeneous modalities — including text, image, video, and audio — into a unified representation space, enabling comprehensive cross-modal retrieval and understanding within a single model.
 
-**Ovis-Omni-Embedding-3B** achieves leading performance on the Massive Multimodal Embedding Benchmark (MMEB).
+**Ovis-Omni-Embedding-3B** achieves leading performance on the Massive Multimodal Embedding Benchmark (MMEB). It is a 3B-parameter universal embedding model for text, images, visual documents, video, audio, and interleaved multimodal inputs, and is initialized from **Qwen2.5-Omni-3B**. Rather than attaching separate modality-specific embedding towers, it retains the native text tokenizer, vision encoder, audio encoder, and shared Thinker backbone. The speech-generation Talker and language-modeling head are removed, and the final-layer hidden state at the last non-padding token is used directly as the retrieval embedding.
+
+> The model page is now available on Hugging Face: [**ATH-MaaS/Ovis-Omni-Embedding-3B**](https://huggingface.co/ATH-MaaS/Ovis-Omni-Embedding-3B). Model weights are not open-sourced yet and will be released in the near future. Stay tuned!
+
+## Model Highlights
+
+- **Native omni-modal encoder:** Text, image, video, and audio tokens are jointly processed by the pretrained Qwen2.5-Omni Thinker instead of being aligned through separately trained retrieval towers.
+- **Any-to-any retrieval:** Queries and candidates may each contain a single modality or an interleaved combination of supported modalities.
+- **One shared embedding interface:** Last-token pooling with no modality-specific projection head; all inputs are compared in the same cosine-similarity space.
+- **Data-centric omni-modal training:** Training spans text retrieval, image understanding, visual documents, video, speech, music, environmental sound, and agent-oriented tasks.
+- **Difficulty-aware contrastive learning:** Focal embedding loss reduces the weight of already resolved examples and focuses optimization on queries with competitive negatives.
+- **Fine-grained embedding distillation:** The model learns complete teacher similarity distributions over positive and negative candidates rather than only one-hot relevance labels.
+- **Homogeneous-source finetuning:** Each micro-batch is drawn from one dataset, producing task-consistent in-batch negatives and limiting shortcuts based on modality or formatting.
+- **Elastic embedding dimensions:** The native 2048-dimensional representation can be adapted to 1024, 512, 256, or 128 dimensions through post-hoc low-rank feature decomposition and lightweight residual adapters.
+
+## Performance
+
+### MMEB-v3
+
+MMEB-v3 is an omni-modal benchmark comprising **190 datasets** across image, video, visual-document, text, audio, and agent retrieval. Ovis-Omni-Embedding-3B achieves **58.46 overall**, outperforming the strongest compared baseline by **5.19 points**, and ranks first on the aggregate score of every modality group.
+
+| Group | Ovis-Omni-Embedding-3B | Best compared baseline | Margin |
+|:------|:----------------------:|:----------------------:|:------:|
+| Image | 77.55 | 73.83 | +3.72 |
+| Video | 64.99 | 59.37 | +5.62 |
+| Visual document | 78.26 | 75.37 | +2.89 |
+| Text | 47.15 | 43.62 | +3.53 |
+| Audio | 50.08 | 43.17 | +6.91 |
+| Agent | 45.52 | 39.42 | +6.10 |
+| **All 190 datasets** | **58.46** | 53.27 | **+5.19** |
+
+Across the 31 aggregate and sub-task entries in the complete comparison, Ovis-Omni-Embedding-3B ranks first on 22 and second on 8. MultiConIR is the only entry on which it falls outside the top two.
+
+### Additional benchmark results
+
+| Benchmark | Ovis-Omni-Embedding-3B | Evaluation scope |
+|:----------|:----------------------:|:-----------------|
+| MAEB (beta) | 57.29 | Mean over 30 audio embedding tasks |
+| MVEB (beta) | 61.77 | Mean over 23 video and audio-video embedding tasks |
+| RTEB | 67.35 | 15-task English public retrieval split |
+
+These benchmark families use their own official aggregation procedures, so their scores should not be averaged together. MAEB and MVEB results are local evaluations inserted into the corresponding leaderboard snapshots, as described in the technical report.
 
 ## Release
+- [26/09/23] 🔥 The model page of **Ovis-Omni-Embedding-3B** is now live on [Hugging Face](https://huggingface.co/ATH-MaaS/Ovis-Omni-Embedding-3B). Model weights will be open-sourced soon.
 - [26/09/04] 🔥 **Ovis-Omni-Embedding-3B** released. Check out the [MMEB Leaderboard](https://huggingface.co/spaces/TIGER-Lab/MMEB) for results.
 - [26/08/21] 🔥 **Ovis-Omni-Embedding-v0.5** released and submitted to the [MMEB](https://huggingface.co/spaces/TIGER-Lab/MMEB) official leaderboard.
 - [26/07/30] 🔥 Announcing Ovis-Omni-Embedding, an omni-modal embedding model for text, image, video, and audio.
 
 ## Model
 
-| Model | Parameters | Supported Modalities | Tech Report | MMEB Leaderboard |
-|:------|:----------:|:--------------------:|:-------------:|:----------------:|
-| Ovis-Omni-Embedding-3B | 3B | Text / Image / Video / Audio | Coming soon | [Leaderboard](https://huggingface.co/spaces/TIGER-Lab/MMEB) |
+| Model | Parameters | Supported Modalities | Embedding Dim | Model Page | Model Weights | Tech Report |
+|:------|:----------:|:--------------------:|:-------------:|:----------:|:-------------:|:-----------:|
+| Ovis-Omni-Embedding-3B | 3B | Text / Image / Visual Document / Video / Audio | 2048 (elastic: 1024 / 512 / 256 / 128) | [🤗 HF](https://huggingface.co/ATH-MaaS/Ovis-Omni-Embedding-3B) | Coming soon | Coming soon |
 
 ## Related Projects
-- [**Ovis-VL-Embedding**](https://github.com/ATH-MaaS/Ovis-VL-Embedding): A vision-language embedding model for text and image.
+- [**Ovis-VL-Embedding**](https://github.com/ATH-MaaS/Ovis-VL-Embedding): A vision-language embedding model for text, image, visual document, and video.
 
 ## Citation
 The technical report is forthcoming. Citation information will be provided upon its release.

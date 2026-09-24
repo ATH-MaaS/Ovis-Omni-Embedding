@@ -62,7 +62,18 @@ These benchmark families use their own official aggregation procedures, so their
 - [**Ovis-VL-Embedding**](https://github.com/ATH-MaaS/Ovis-VL-Embedding): A vision-language embedding model for text, image, visual document, and video.
 
 ## Citation
-If you find this work useful, please consider citing our technical report: [arXiv:2609.25165](https://arxiv.org/pdf/2609.25165).
+
+If you find our embedding models useful, please consider citing our technical report:
+
+```bibtex
+@article{ovisembedding2026,
+  title   = {Ovis-Embedding: Pushing the Frontiers of Universal Omni-Modal Embeddings},
+  author  = {{Ovis-Embedding Team}},
+  journal = {arXiv preprint arXiv:2609.25165},
+  year    = {2026},
+  url     = {https://arxiv.org/abs/2609.25165}
+}
+```
 
 ## License
 This project is licensed under the [Apache License, Version 2.0](https://www.apache.org/licenses/LICENSE-2.0.txt) (SPDX-License-Identifier: Apache-2.0).

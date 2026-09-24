@@ -56,7 +56,7 @@ These benchmark families use their own official aggregation procedures, so their
 
 | Model | Parameters | Supported Modalities | Embedding Dim | Model Page | Tech Report |
 |:------|:----------:|:--------------------:|:-------------:|:----------:|:-----------:|
-| Ovis-Omni-Embedding-3B | 3B | Text / Image / Visual Document / Video / Audio | 2048 (elastic: 1024 / 512 / 256 / 128) | [🤗 HF](https://huggingface.co/ATH-MaaS/Ovis-Omni-Embedding-3B) *(weights coming soon)* | [📖 arXiv](https://arxiv.org/pdf/2609.25165) |
+| Ovis-Omni-Embedding-3B | 3B | Text / Image / Visual Document / Video / Audio | 2048 (elastic: 1024 / 512 / 256 / 128) | [🤗 HF](https://huggingface.co/ATH-MaaS/Ovis-Omni-Embedding-3B)  | [📖 arXiv](https://arxiv.org/pdf/2609.25165) |
 
 ## Related Projects
 - [**Ovis-VL-Embedding**](https://github.com/ATH-MaaS/Ovis-VL-Embedding): A vision-language embedding model for text, image, visual document, and video.

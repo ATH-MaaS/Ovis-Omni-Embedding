@@ -16,7 +16,7 @@ Ovis-Omni-Embedding is an omni-modal embedding model developed by the Alibaba AT
 
 **Ovis-Omni-Embedding-3B** achieves leading performance on the Massive Multimodal Embedding Benchmark (MMEB). It is a 3B-parameter universal embedding model for text, images, visual documents, video, audio, and interleaved multimodal inputs, and is initialized from **Qwen2.5-Omni-3B**. Rather than attaching separate modality-specific embedding towers, it retains the native text tokenizer, vision encoder, audio encoder, and shared Thinker backbone. The speech-generation Talker and language-modeling head are removed, and the final-layer hidden state at the last non-padding token is used directly as the retrieval embedding.
 
-> Our technical report is now available on arXiv: [**arXiv:2609.25165**](https://arxiv.org/pdf/2609.25165). The model page is also live on Hugging Face: [**ATH-MaaS/Ovis-Omni-Embedding-3B**](https://huggingface.co/ATH-MaaS/Ovis-Omni-Embedding-3B). Model weights are not open-sourced yet and will be released in the near future. Stay tuned!
+> Our technical report is now available on arXiv: [**arXiv:2609.25165**](https://arxiv.org/pdf/2609.25165). The model page is also live on Hugging Face: [**ATH-MaaS/Ovis-Omni-Embedding-3B**](https://huggingface.co/ATH-MaaS/Ovis-Omni-Embedding-3B). Model weights have been open-sourced!
 
 ## Performance
 
